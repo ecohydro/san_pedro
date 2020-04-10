@@ -1,0 +1,44 @@
+README:	San Pedro River Spatial ET and Elevation Data
+
+Author:	Marc Mayes mmayes@ucsb.edu
+Date:	2 April 2020
+
+Updated: 7 April 2020
+
+Data Description:	Linearly interpolated mean total growing season ET, 2014-2019 (Landsat-8 METRIC EEFlux, original resolution 28.5 m, see below), ASTER-30 m digital elevation data (original resolution 30 m), and slope data calculated from DEM (2 km moving window) extracted over pixels down the stream channel of the San Pedro River, Arizona, between the US-Mexico Border and Benson Arizona.  Total length-scale of the data represented is 97 km.  Data were resampled to equal intervals.
+
+Wide-format dataset (SPR_TotET6yrmean_elev_wide.csv)
+Fields:
+Distance_km:	Distance from transect start.  Begins 1.25 km, ends 96 km.
+Elev_m:		Elevation in meters
+TotET_mm:	Mean total growing season evapotranspiration in mm, years 2014-2019.  Growing season is Mar-Oct.
+slope_pct:	Percent slope calculated at a 2-km moving window, integrating over 9 observations at 0.25 km scale.
+Resampling interval: 250 m
+
+Long-format dataset (SPR_TotET6yrmean_elev_long.csv)
+Fields:
+Distance_km:	Distance from transect start.  Begins 1.25 km, ends 96 km.
+variable:	Variable type.  Includes Elev_m, TotET_mm, and slope_pct as described above.
+value:		Value of variable types.
+Resampling interval: 250 m
+
+Wide-format dataset (ET_elev_interp_50m.csv)
+Fields:
+Distance_km:	Distance from transect start.  Begins 0.5 km, ends 97 km.
+Elev_m:		Elevation in meters
+ET14_mm:	Total growing season evapotranspiration in mm, year 2014.  Growing season in Mar-Oct.
+ET15_mm-ET_19_mm	Sames as ET14 for individual years.
+ETMN_mm:	Mean total growing season evapotranspiration in mm, years 2014-2019.
+Distance_m:	Distance from transect start in m.
+
+
+
+Long-format dataset (ET_elev_interp_50m_long.csv)
+Fields:
+Distance_km: 	Same as wide-format above.
+Distance_m:	Same as wide-format above.
+variable:	Variable type.  Includes Elev_m, ET14_mm, ET15_mm, ET16_mm, ET17_mm, ET18_mm, ET19_mm, and ETMN_mm as described above.
+
+
+
+ 
